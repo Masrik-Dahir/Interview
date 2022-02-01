@@ -55,10 +55,13 @@
 def countingSort(arr):
     # Write your code here
     new_arr = []
-    for i in range(0, len(arr)):
+    m = max(arr)
+    for i in range(0, m + 1):
         new_arr.append(0)
     for i in range(0, len(arr)):
         new_arr[arr[i]] += 1
+
+    print(len(new_arr))
     return new_arr
 
 print(countingSort([1,2,3,4,5,6,72,3,4,51,2,3,4]))
