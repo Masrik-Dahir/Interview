@@ -16,5 +16,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: x64  
-      - run: for f in Hackerrank/*.py; do python "$f"; done
+      - run: cd Hackerrank
+      - run: for f in *.py; do python "$f"; done
+      - run: cd ..
       - run: for f in *.py; do python "$f"; done
