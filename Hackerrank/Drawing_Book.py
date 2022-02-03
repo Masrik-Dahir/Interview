@@ -43,9 +43,11 @@ def pageCount(n, p):
             lis.append([i, i + 1])
 
         if p == i:
-            counter = i
+            counter = len(lis)
 
         elif p == i + 1:
-            counter = i + 1
+            counter = len(lis) + 1
 
-    return min(counter, n - counter)
+    return min(counter, len(lis) - counter)
+
+print(pageCount(10, 7))
