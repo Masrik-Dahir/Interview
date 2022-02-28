@@ -65,7 +65,7 @@
 
 def towerBreakers(n, m):
     # Write your code here
-    turn = True
+    turn = False
     for i in range(1, n+1):
         divider = 2
         high = 0
@@ -77,7 +77,11 @@ def towerBreakers(n, m):
             divider += 1
         m = int(m/divider)
         turn = not turn
-    return turn
+
+    if turn == True:
+        return 1
+    else:
+        return 2
 
 
 
